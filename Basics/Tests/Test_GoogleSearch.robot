@@ -15,6 +15,6 @@ Sending the values and asserting the values
   Input Text    //textarea[@class='gLFyf']    RobotFramework
   Sleep   2s
   Click Button    xpath:(//input[@class='gNO89b'])[1]
-  Element Should Contain    xpath=(//span[text()='Robot Framework'])[1]    Robotf  ramework
+  Element Should Contain    xpath=(//span[text()='Robot Framework'])[1]    Robotframework
   Close Browser      
 
