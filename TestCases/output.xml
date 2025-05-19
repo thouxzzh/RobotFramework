@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-19T21:08:02.417776" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\RobotFrameworkBasics\Saucedemo\TestCases\LoginTest.robot">
+<test id="s1-t1" name="Valid cred1" line="13">
+<kw name="Validate unsuccessful Login">
+<kw name="Open the Browser with the URL">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:08:02.708809" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T21:08:02.708625" elapsed="3.909418"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T21:08:06.618341" elapsed="0.031569"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T21:08:06.650138" elapsed="0.001291"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:08:02.708186" elapsed="3.943413"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:08:06.652715" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@name='user-name']'.</msg>
+<msg time="2025-05-19T21:08:11.770843" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-19T21:08:11.771061" level="FAIL">Element with locator 'xpath://input[@name='user-name']' not found.</msg>
+<arg>xpath://input[@name='user-name']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-05-19T21:08:06.652117" elapsed="5.121431">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:11.773759" elapsed="0.000033"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//input[@class='btn_action']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:11.773866" elapsed="0.000018"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="FAIL" start="2025-05-19T21:08:06.651810" elapsed="5.122176">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${username}&quot;==&quot;locked_out_user&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Epic sadface:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:11.774217" elapsed="0.000031"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T21:08:11.774084" elapsed="0.000206"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:11.774415" elapsed="0.000019"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:11.774500" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T21:08:11.774345" elapsed="0.000198"/>
+</branch>
+<status status="NOT RUN" start="2025-05-19T21:08:11.774054" elapsed="0.000516"/>
+</if>
+<kw name="Close Browser session">
+<status status="NOT RUN" start="2025-05-19T21:08:11.774662" elapsed="0.000021"/>
+</kw>
+<arg>username=standard_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="FAIL" start="2025-05-19T21:08:02.707941" elapsed="9.066815">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<status status="FAIL" start="2025-05-19T21:08:02.706899" elapsed="9.068458">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</test>
+<test id="s1-t2" name="Valid cred2" line="13">
+<kw name="Validate unsuccessful Login">
+<kw name="Open the Browser with the URL">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:08:11.777499" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T21:08:11.777351" elapsed="4.031423"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T21:08:15.809023" elapsed="0.029369"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T21:08:15.838653" elapsed="0.002345"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:08:11.777195" elapsed="4.063991"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:08:15.842227" level="INFO">Typing text 'problem_user' into text field 'xpath://input[@name='user-name']'.</msg>
+<msg time="2025-05-19T21:08:20.978547" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-19T21:08:20.978766" level="FAIL">Element with locator 'xpath://input[@name='user-name']' not found.</msg>
+<arg>xpath://input[@name='user-name']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-05-19T21:08:15.841888" elapsed="5.138601">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:20.981068" elapsed="0.000064"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//input[@class='btn_action']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:20.981269" elapsed="0.000044"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="FAIL" start="2025-05-19T21:08:15.841415" elapsed="5.140041">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${username}&quot;==&quot;locked_out_user&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Epic sadface:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:20.981732" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T21:08:20.981599" elapsed="0.000203"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:20.981932" elapsed="0.000026"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:20.982045" elapsed="0.000025"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T21:08:20.981842" elapsed="0.000485"/>
+</branch>
+<status status="NOT RUN" start="2025-05-19T21:08:20.981558" elapsed="0.000834"/>
+</if>
+<kw name="Close Browser session">
+<status status="NOT RUN" start="2025-05-19T21:08:20.982650" elapsed="0.000109"/>
+</kw>
+<arg>username=problem_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="FAIL" start="2025-05-19T21:08:11.776995" elapsed="9.205977">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<status status="FAIL" start="2025-05-19T21:08:11.776265" elapsed="9.207156">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</test>
+<test id="s1-t3" name="Valid cred3" line="13">
+<kw name="Validate unsuccessful Login">
+<kw name="Open the Browser with the URL">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:08:20.988668" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T21:08:20.988331" elapsed="4.646252"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T21:08:25.634896" elapsed="0.033655"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T21:08:25.668785" elapsed="0.002906"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:08:20.987828" elapsed="4.683990"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:08:25.672609" level="INFO">Typing text 'performance_glitch_user' into text field 'xpath://input[@name='user-name']'.</msg>
+<msg time="2025-05-19T21:08:30.837150" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-19T21:08:30.837321" level="FAIL">Element with locator 'xpath://input[@name='user-name']' not found.</msg>
+<arg>xpath://input[@name='user-name']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-05-19T21:08:25.672364" elapsed="5.166231">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:30.838792" elapsed="0.000039"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//input[@class='btn_action']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:30.838938" elapsed="0.000242"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="FAIL" start="2025-05-19T21:08:25.671996" elapsed="5.167423">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${username}&quot;==&quot;locked_out_user&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Epic sadface:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:30.839743" elapsed="0.000028"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T21:08:30.839624" elapsed="0.000186"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:30.839926" elapsed="0.000026"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:30.840045" elapsed="0.000024"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T21:08:30.839848" elapsed="0.000256"/>
+</branch>
+<status status="NOT RUN" start="2025-05-19T21:08:30.839594" elapsed="0.000540"/>
+</if>
+<kw name="Close Browser session">
+<status status="NOT RUN" start="2025-05-19T21:08:30.840240" elapsed="0.000027"/>
+</kw>
+<arg>username=performance_glitch_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="FAIL" start="2025-05-19T21:08:20.986681" elapsed="9.853664">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<status status="FAIL" start="2025-05-19T21:08:20.985003" elapsed="9.855755">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</test>
+<test id="s1-t4" name="Invalid cred1" line="13">
+<kw name="Validate unsuccessful Login">
+<kw name="Open the Browser with the URL">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:08:30.843554" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T21:08:30.843417" elapsed="4.770691"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T21:08:35.614734" elapsed="0.039695"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T21:08:35.654833" elapsed="0.003686"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:08:30.843254" elapsed="4.815461"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:08:35.659662" level="INFO">Typing text 'locked_out_user' into text field 'xpath://input[@name='user-name']'.</msg>
+<msg time="2025-05-19T21:08:40.835215" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-16.png"&gt;&lt;img src="selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-19T21:08:40.835412" level="FAIL">Element with locator 'xpath://input[@name='user-name']' not found.</msg>
+<arg>xpath://input[@name='user-name']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-05-19T21:08:35.659462" elapsed="5.176963">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:40.836612" elapsed="0.000032"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//input[@class='btn_action']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:40.836723" elapsed="0.000018"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="FAIL" start="2025-05-19T21:08:35.658990" elapsed="5.177833">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${username}&quot;==&quot;locked_out_user&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Epic sadface:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:40.837013" elapsed="0.000022"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T21:08:40.836909" elapsed="0.000155"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:40.837253" elapsed="0.000021"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2025-05-19T21:08:40.837348" elapsed="0.000018"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T21:08:40.837174" elapsed="0.000218"/>
+</branch>
+<status status="NOT RUN" start="2025-05-19T21:08:40.836887" elapsed="0.000528"/>
+</if>
+<kw name="Close Browser session">
+<status status="NOT RUN" start="2025-05-19T21:08:40.837538" elapsed="0.000044"/>
+</kw>
+<arg>username=locked_out_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="FAIL" start="2025-05-19T21:08:30.843044" elapsed="9.994637">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</kw>
+<status status="FAIL" start="2025-05-19T21:08:30.842021" elapsed="9.995947">Element with locator 'xpath://input[@name='user-name']' not found.</status>
+</test>
+<status status="FAIL" start="2025-05-19T21:08:02.419680" elapsed="38.419028"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTest" id="s1" pass="0" fail="4" skip="0">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
