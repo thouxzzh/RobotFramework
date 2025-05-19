@@ -1,0 +1,6 @@
+datasources:a83ed0c93c33fd1b94eb7688a977e1321daaa9b7
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:c6bd8307373f5325b998fd387622cc9ac274c07d
+--suite POM.TestCases.ForgetPasswordTest
+--suite POM.TestCases.LoginPageTest
