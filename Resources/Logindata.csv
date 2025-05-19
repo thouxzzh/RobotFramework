@@ -1,0 +1,5 @@
+*** Test Cases ***,${username},${password}
+Valid cred1,standard_user,secret_sauce
+Valid cred2,problem_user,secret_sauce
+Valid cred3,performance_glitch_user,secret_sauce
+Invalid cred1,locked_out_user,secret_sauce
