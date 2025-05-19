@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-19T22:12:00.913109" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTest" source="C:\RobotFrameworkBasics\Saucedemo\TestCases\LoginTest.robot">
+<test id="s1-t1" name="Valid cred1" line="12">
+<kw name="Validate unsuccessful Login">
+<kw name="Open the Browser with URL" owner="GenericResource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:01.278012" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/index.html'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T22:12:01.277692" elapsed="1.729684"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T22:12:03.007700" elapsed="0.031151"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T22:12:03.039048" elapsed="0.001005"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:01.276794" elapsed="1.763376"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:03.040968" level="INFO">Typing text 'standard_user' into text field 'xpath://input[@name='user-name']'.</msg>
+<arg>xpath://input[@name='user-name']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:03.040650" elapsed="0.137980"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:03.179373" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2025-05-19T22:12:03.217663" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:03.178858" elapsed="0.092665"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:03.272094" level="INFO">Clicking button 'xpath=//input[@class='btn_action']'.</msg>
+<arg>xpath=//input[@class='btn_action']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:03.271815" elapsed="3.289476"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-19T22:12:03.040341" elapsed="3.521123"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${username}&quot;==&quot;locked_out_user&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Epic sadface:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-19T22:12:06.561982" elapsed="0.000045"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T22:12:06.561629" elapsed="0.000459"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-19T22:12:06.562272" elapsed="0.008140"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:06.579871" level="INFO">Current location is 'https://www.saucedemo.com/v1/inventory.html'.</msg>
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-05-19T22:12:06.570797" elapsed="0.009295"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:06.562158" elapsed="0.018103"/>
+</branch>
+<status status="PASS" start="2025-05-19T22:12:06.561579" elapsed="0.018827"/>
+</if>
+<kw name="Close Browser Session" owner="GenericResource">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-19T22:12:06.581467" elapsed="2.166079"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:06.580824" elapsed="2.167053"/>
+</kw>
+<arg>username=standard_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="PASS" start="2025-05-19T22:12:01.276264" elapsed="7.471776"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:01.273402" elapsed="7.475596"/>
+</test>
+<test id="s1-t2" name="Valid cred2" line="12">
+<kw name="Validate unsuccessful Login">
+<kw name="Open the Browser with URL" owner="GenericResource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:08.754721" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/index.html'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T22:12:08.754271" elapsed="1.984138"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T22:12:10.738955" elapsed="0.041269"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T22:12:10.780568" elapsed="0.002294"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:08.753743" elapsed="2.029391"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:10.784768" level="INFO">Typing text 'problem_user' into text field 'xpath://input[@name='user-name']'.</msg>
+<arg>xpath://input[@name='user-name']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:10.784307" elapsed="0.140846"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:10.926714" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2025-05-19T22:12:10.958211" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:10.926004" elapsed="0.088990"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:11.016171" level="INFO">Clicking button 'xpath=//input[@class='btn_action']'.</msg>
+<arg>xpath=//input[@class='btn_action']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:11.015595" elapsed="0.406159"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-19T22:12:10.783528" elapsed="0.638420"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${username}&quot;==&quot;locked_out_user&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Epic sadface:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-19T22:12:11.422908" elapsed="0.000126"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T22:12:11.422135" elapsed="0.001076"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-19T22:12:11.423706" elapsed="0.006687"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:11.435314" level="INFO">Current location is 'https://www.saucedemo.com/v1/inventory.html'.</msg>
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-05-19T22:12:11.430624" elapsed="0.004898"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:11.423368" elapsed="0.012608"/>
+</branch>
+<status status="PASS" start="2025-05-19T22:12:11.422089" elapsed="0.014033"/>
+</if>
+<kw name="Close Browser Session" owner="GenericResource">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-19T22:12:11.437016" elapsed="2.146558"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:11.436615" elapsed="2.147500"/>
+</kw>
+<arg>username=problem_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="PASS" start="2025-05-19T22:12:08.753054" elapsed="4.831323"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:08.750396" elapsed="4.834887"/>
+</test>
+<test id="s1-t3" name="Valid cred3" line="12">
+<kw name="Validate unsuccessful Login">
+<kw name="Open the Browser with URL" owner="GenericResource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:13.589323" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/index.html'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T22:12:13.588822" elapsed="2.106294"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T22:12:15.695334" elapsed="0.050128"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T22:12:15.745738" elapsed="0.001811"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:13.588658" elapsed="2.159047"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:15.748669" level="INFO">Typing text 'performance_glitch_user' into text field 'xpath://input[@name='user-name']'.</msg>
+<arg>xpath://input[@name='user-name']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:15.748391" elapsed="0.165034"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:15.914274" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2025-05-19T22:12:15.957210" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:15.913768" elapsed="0.114115"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:16.028465" level="INFO">Clicking button 'xpath=//input[@class='btn_action']'.</msg>
+<arg>xpath=//input[@class='btn_action']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:16.028190" elapsed="10.779635"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-19T22:12:15.747926" elapsed="11.060152"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${username}&quot;==&quot;locked_out_user&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>Epic sadface:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2025-05-19T22:12:26.809230" elapsed="0.000073"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T22:12:26.808407" elapsed="0.000973"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2025-05-19T22:12:26.809595" elapsed="0.005513"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:26.818790" level="INFO">Current location is 'https://www.saucedemo.com/v1/inventory.html'.</msg>
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="PASS" start="2025-05-19T22:12:26.815313" elapsed="0.003565"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:26.809447" elapsed="0.009499"/>
+</branch>
+<status status="PASS" start="2025-05-19T22:12:26.808262" elapsed="0.010731"/>
+</if>
+<kw name="Close Browser Session" owner="GenericResource">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-19T22:12:26.819429" elapsed="2.168572"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:26.819165" elapsed="2.169120"/>
+</kw>
+<arg>username=performance_glitch_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="PASS" start="2025-05-19T22:12:13.588446" elapsed="15.399996"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:13.586986" elapsed="15.402046"/>
+</test>
+<test id="s1-t4" name="Invalid cred1" line="12">
+<kw name="Validate unsuccessful Login">
+<kw name="Open the Browser with URL" owner="GenericResource">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:28.995151" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/v1/index.html'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T22:12:28.994699" elapsed="1.768621"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T22:12:30.763710" elapsed="0.034253"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T22:12:30.798366" elapsed="0.002307"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:28.994162" elapsed="1.806748"/>
+</kw>
+<kw name="Fill the login form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:30.802524" level="INFO">Typing text 'locked_out_user' into text field 'xpath://input[@name='user-name']'.</msg>
+<arg>xpath://input[@name='user-name']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:30.802023" elapsed="0.153917"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:30.957021" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2025-05-19T22:12:31.001520" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:30.956444" elapsed="0.115525"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:31.072687" level="INFO">Clicking button 'xpath=//input[@class='btn_action']'.</msg>
+<arg>xpath=//input[@class='btn_action']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T22:12:31.072338" elapsed="0.075894"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-05-19T22:12:30.801249" elapsed="0.347196"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${username}&quot;==&quot;locked_out_user&quot;">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-19T22:12:31.166373" level="INFO">Current page contains text 'Epic sadface:'.</msg>
+<arg>Epic sadface:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-19T22:12:31.149107" elapsed="0.017469"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:31.148686" elapsed="0.018045"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="NOT RUN" start="2025-05-19T22:12:31.167144" elapsed="0.000304"/>
+</kw>
+<kw name="Location Should Be" owner="SeleniumLibrary">
+<arg>https://www.saucedemo.com/v1/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<status status="NOT RUN" start="2025-05-19T22:12:31.167773" elapsed="0.000073"/>
+</kw>
+<status status="NOT RUN" start="2025-05-19T22:12:31.166846" elapsed="0.001096"/>
+</branch>
+<status status="PASS" start="2025-05-19T22:12:31.148624" elapsed="0.019405"/>
+</if>
+<kw name="Close Browser Session" owner="GenericResource">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-19T22:12:31.168905" elapsed="2.148381"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:31.168317" elapsed="2.149375"/>
+</kw>
+<arg>username=locked_out_user</arg>
+<arg>password=secret_sauce</arg>
+<status status="PASS" start="2025-05-19T22:12:28.993442" elapsed="4.324428"/>
+</kw>
+<status status="PASS" start="2025-05-19T22:12:28.990287" elapsed="4.328136"/>
+</test>
+<status status="PASS" start="2025-05-19T22:12:00.915697" elapsed="32.404792"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTest" id="s1" pass="4" fail="0" skip="0">LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
