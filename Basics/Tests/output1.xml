@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-19T10:20:15.395473" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Alert" source="C:\RobotFrameworkBasics\Basics\Tests\Test_Alert.robot">
+<test id="s1-t1" name="Verify the simple alert" line="5">
+<kw name="Open the browser with url">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:15.758842" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Alerts.html'.</msg>
+<arg>https://demo.automationtesting.in/Alerts.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T10:20:15.758656" elapsed="5.969450"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T10:20:21.728370" elapsed="0.047096"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2025-05-19T10:20:21.775682" elapsed="0.001073"/>
+</kw>
+<status status="PASS" start="2025-05-19T10:20:15.758043" elapsed="6.018796"/>
+</kw>
+<kw name="Verify and accept the alert">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:21.777963" level="INFO">Clicking element 'xpath=(//a[@class='analystic'])[1]'.</msg>
+<arg>xpath=(//a[@class='analystic'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T10:20:21.777566" elapsed="0.092674"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:21.870596" level="INFO">Clicking button 'xpath=//button[@class='btn btn-danger']'.</msg>
+<arg>xpath=//button[@class='btn btn-danger']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T10:20:21.870407" elapsed="0.137020"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-19T10:20:23.008660" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-19T10:20:22.007750" elapsed="1.001142"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:23.009587" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>I am an alert box!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-05-19T10:20:23.009251" elapsed="0.011280"/>
+</kw>
+<status status="PASS" start="2025-05-19T10:20:21.777269" elapsed="1.243574"/>
+</kw>
+<kw name="Verify and dismiss the alert">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:23.022495" level="INFO">Clicking element 'xpath:(//a[@class='analystic'])[2]'.</msg>
+<arg>xpath:(//a[@class='analystic'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T10:20:23.022069" elapsed="0.098125"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:23.120513" level="INFO">Clicking button 'xpath://button[@class='btn btn-primary']'.</msg>
+<arg>xpath://button[@class='btn btn-primary']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T10:20:23.120351" elapsed="0.099736"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-19T10:20:28.220832" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-19T10:20:23.220266" elapsed="5.000772"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:28.221731" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>Press a Button !</arg>
+<arg>DISMISS</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-05-19T10:20:28.221370" elapsed="0.010713"/>
+</kw>
+<status status="PASS" start="2025-05-19T10:20:23.021429" elapsed="5.210962"/>
+</kw>
+<kw name="Click an alert with Textbox">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:28.233540" level="INFO">Clicking element 'xpath:(//a[@class='analystic'])[3]'.</msg>
+<arg>xpath:(//a[@class='analystic'])[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T10:20:28.233332" elapsed="0.100458"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:20:28.334341" level="INFO">Clicking button 'xpath://button[@class='btn btn-info']'.</msg>
+<arg>xpath://button[@class='btn btn-info']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T10:20:28.333944" elapsed="0.109994"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-19T10:20:31.444891" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-19T10:20:28.444132" elapsed="3.000983"/>
+</kw>
+<kw name="Input Text Into Alert" owner="SeleniumLibrary">
+<arg>Tester</arg>
+<doc>Types the given ``text`` into an input field in an alert.</doc>
+<status status="PASS" start="2025-05-19T10:20:31.445383" elapsed="0.007770"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-19T10:20:34.454407" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-19T10:20:31.453393" elapsed="3.001250"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-19T10:21:40.640375" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-05-19T10:21:40.640656" level="FAIL">Page should have contained text 'WrongTest' but did not.</msg>
+<arg>WrongTest</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-05-19T10:20:34.455101" elapsed="66.226993">Page should have contained text 'WrongTest' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-05-19T10:20:28.232982" elapsed="72.449270">Page should have contained text 'WrongTest' but did not.</status>
+</kw>
+<status status="FAIL" start="2025-05-19T10:20:15.757358" elapsed="84.925416">Page should have contained text 'WrongTest' but did not.</status>
+</test>
+<status status="FAIL" start="2025-05-19T10:20:15.397559" elapsed="85.286860"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Alert" id="s1" pass="0" fail="1" skip="0">Test Alert</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

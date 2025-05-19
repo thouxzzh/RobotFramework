@@ -31,7 +31,7 @@ Click an alert with Textbox
    Click Element    xpath:(//a[@class='analystic'])[3]
    Click Button     xpath://button[@class='btn btn-info']
    Sleep   3s
-   Input Text Into Alert    Tester     
+   Input Text Into Alert    Tester
    Sleep   3s
    Page Should Contain   Tester
   

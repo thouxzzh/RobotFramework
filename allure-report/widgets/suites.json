@@ -1,1 +1,1 @@
-{"total":1,"items":[{"uid":"6f5fe94f6cbc1afa39f1c5efb64ba2df","name":"Test RadioButton","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
+{"total":2,"items":[{"uid":"6f5fe94f6cbc1afa39f1c5efb64ba2df","name":"Test RadioButton","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}},{"uid":"b275850f99c89776f57a76e03bfa3e8e","name":"Test Alert","statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1}}]}
